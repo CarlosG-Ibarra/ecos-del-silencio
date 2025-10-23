@@ -1,0 +1,96 @@
+.caracteristicas {
+  /* Full background image with subtle dark overlay */
+  background: 
+    linear-gradient(rgba(7, 5, 1, 0.25), rgba(7, 5, 1, 0.25)), /* subtle dark overlay */
+    url('./lomas.jpeg') center center / cover no-repeat;
+  color: #f5f5f5;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle moving fog overlay */
+.caracteristicas::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(232, 78, 42, 0.02) 0%, transparent 70%);
+  animation: slowPulse 15s infinite alternate;
+  z-index: 0;
+}
+
+/* Grid container for square cards */
+.caracteristicas-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Individual feature cards */
+.feature {
+  background: rgba(7, 5, 1, 0.8); /* slightly more transparent to show background */
+  border-left: 6px solid #E84E2A;
+  box-shadow: 0 0 20px rgba(232, 78, 42, 0.4);
+  border-radius: 2px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+
+  /* Square shape */
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+}
+
+/* Fade-in when scroll into view */
+.feature.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effects */
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(232, 78, 42, 0.6);
+}
+
+.feature h2 {
+  color: #E84E2A;
+  text-shadow: 0 0 10px #890501;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.feature:hover h2 {
+  text-shadow: 0 0 20px #E84E2A, 0 0 30px #890501;
+  color: #FF6E40;
+}
+
+.feature p {
+  color: #c5c5c5;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  overflow-y: auto;
+  max-height: 60%;
+}
+
+/* Animations */
+@keyframes slowPulse {
+  from { transform: scale(1); opacity: 0.02; }
+  to { transform: scale(1.05); opacity: 0.05; }
+}

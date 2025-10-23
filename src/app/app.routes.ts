@@ -10,4 +10,5 @@ export const routes: Routes = [
   { path: 'caracteristicas', component: Caracteristicas },
   { path: 'historia', component: Historia },
   { path: 'contacto', component: Contacto },
+  { path: 'minijuegos', component: MinijuegosComponent }, 
 ];

@@ -1,11 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-caracteristicas',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './caracteristicas.html',
-  styleUrl: './caracteristicas.css'
+  styleUrls: ['./caracteristicas.css']
 })
-export class Caracteristicas {
+export class Caracteristicas implements AfterViewInit {
 
+  ngAfterViewInit() {
+    const features = document.querySelectorAll('.feature');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('in-view');
+      });
+    }, { threshold: 0.2 });
+
+    features.forEach(f => observer.observe(f));
+  }
 }
