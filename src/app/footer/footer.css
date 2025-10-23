@@ -1,0 +1,15 @@
+    
+
+.footer-content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #E84E2A; /* highlight/orange */
+  text-shadow: 0 0 5px #890501; /* subtle red glow */
+}
+
+.footer-content p {
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+  color: #7D7774; /* lighter dark gray for contrast */
+}

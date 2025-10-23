@@ -1,0 +1,33 @@
+.header {
+  background-color: #070501; /* dark base */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #F0703E; 
+
+}
+
+.logo {
+  color: #E84E2A; 
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 0 5px #890501;
+}
+
+.nav-links a {
+  color: #7D7774; 
+  margin-left: 5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #E84E2A; 
+}
