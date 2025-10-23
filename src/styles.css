@@ -2,5 +2,13 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow-y: scroll;  /* allow vertical scroll */
+  scrollbar-width: none; /* for Firefox */
   width: 100%;
+}
+
+
+/* Hide scrollbars for Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  display: none;
 }

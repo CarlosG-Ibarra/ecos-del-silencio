@@ -1,4 +1,13 @@
-    
+.footer {
+  background-color: #070501; 
+  color: #f5f5f5;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+
+}
+
 
 .footer-content h3 {
   margin: 0;
