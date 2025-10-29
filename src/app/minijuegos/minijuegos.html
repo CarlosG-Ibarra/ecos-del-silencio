@@ -1,19 +1,28 @@
 <section class="minijuegos-container">
   <h1>Sección de Minijuegos 🎮</h1>
-  <p>Aquí pronto podrás disfrutar de pequeños juegos interactivos relacionados con "Ecos del Silencio".</p>
 
-  <div class="minijuegos-grid">
-    <div class="placeholder-card">
-      <h2>Juego 1</h2>
-      <p>Próximamente...</p>
-    </div>
-    <div class="placeholder-card">
-      <h2>Juego 2</h2>
-      <p>Próximamente...</p>
-    </div>
-    <div class="placeholder-card">
-      <h2>Juego 3</h2>
-      <p>Próximamente...</p>
+  <div class="minijuegos-grid" [class.expandido]="seleccionado !== null">
+    <div
+      *ngFor="let juego of juegos"
+      class="juego-card"
+      [class.activo]="seleccionado === juego.id"
+      (click)="seleccionarJuego(juego.id)"
+    >
+      <h2>{{ juego.nombre }}</h2>
+
+      <!-- Mostrar descripción si no está activo -->
+      <p *ngIf="seleccionado === null">{{ juego.descripcion }}</p>
+
+      <!-- Mostrar el juego según ID -->
+      <div *ngIf="seleccionado === 1" class="juego-activo">
+        <app-juego1></app-juego1>
+      </div>
+      <div *ngIf="seleccionado === 2" class="juego-activo">
+        <app-juego2></app-juego2>
+      </div>
+      <div *ngIf="seleccionado === 3" class="juego-activo">
+        <app-juego3></app-juego3>
+      </div>
     </div>
   </div>
 </section>
