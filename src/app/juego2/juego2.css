@@ -1,0 +1,16 @@
+.juego2-container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.canvas-placeholder {
+  background: #ffe4b5;
+  border: 2px dashed #ffad42;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
