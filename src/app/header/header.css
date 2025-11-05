@@ -57,6 +57,20 @@
   text-shadow: 0 0 10px #E84E2A;
 }
 
+.login-link {
+  border: 1px solid #E84E2A;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.login-link:hover {
+  background-color: #E84E2A;
+  color: #070501;
+  box-shadow: 0 0 10px #E84E2A;
+}
+
+
 /* Animations reused from inicio for cohesion */
 @keyframes slowPulse {
   from { transform: scale(1); opacity: 0.04; }
