@@ -1,7 +1,6 @@
 .contacto {
   position: relative;
-  background: url('contacto-bg.jpg') no-repeat center center;
-  background-size: cover;
+  background: url('contacto-bg.jpg') no-repeat center center / cover;
   color: #f5f5f5;
   min-height: 100vh;
   display: flex;
@@ -19,34 +18,29 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Adjust opacity here */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
 .contacto-inner {
   position: relative;
   z-index: 1;
-}
-
-.contacto-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  max-width: 1200px;
+  max-width: 75rem; 
   width: 100%;
   align-items: start;
 }
 
-/* HEADINGS */
 h1 {
   color: #E84E2A;
-  text-shadow: 0 0 10px #890501;
+  text-shadow: 0 0 0.625rem #890501;
   font-family: "Creepster", cursive;
   font-size: 2.2rem;
   margin-bottom: 2rem;
 }
 
-/* LEFT SIDE */
 .contact-left {
   display: flex;
   flex-direction: column;
@@ -67,48 +61,48 @@ h1 {
 }
 
 .member img {
-  width: 110px;
-  height: 110px;
+  width: 7rem; 
+  height: 7rem;
   border-radius: 50%;
-  border: 3px solid #E84E2A;
+  border: 0.2rem solid #E84E2A;
   filter: grayscale(100%) contrast(1.2);
   transition: filter 0.4s ease, transform 0.4s ease;
-  box-shadow: 0 0 15px rgba(232, 78, 42, 0.3);
+  box-shadow: 0 0 1rem rgba(232, 78, 42, 0.3);
 }
 
 .member:hover img {
   filter: grayscale(0%) brightness(1.2);
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(232, 78, 42, 0.6);
+  box-shadow: 0 0 1.5rem rgba(232, 78, 42, 0.6);
 }
 
 .member-info h2 {
   color: #E84E2A;
-  text-shadow: 0 0 8px #890501;
-  font-size: 1.2rem;
+  text-shadow: 0 0 0.5rem #890501;
+  font-size: 1.3rem;
   margin-bottom: 0.3rem;
 }
 
 .role {
   color: #c5c5c5;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
-/* CONTACT INFO */
 .contact-info {
   margin-top: 1rem;
 }
 
 .contact-info h3 {
   color: #E84E2A;
-  text-shadow: 0 0 8px #890501;
+  text-shadow: 0 0 0.5rem #890501;
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .contact-info p {
   color: #ccc;
   margin-bottom: 1.2rem;
+  font-size: 1rem;
 }
 
 .social-links {
@@ -124,16 +118,15 @@ h1 {
 
 .social-links a:hover {
   color: #E84E2A;
-  text-shadow: 0 0 15px #E84E2A;
+  text-shadow: 0 0 1rem #E84E2A;
 }
 
-/* RIGHT SIDE: MAP */
 .contact-right iframe {
   width: 100%;
-  height: 450px;
-  border-radius: 12px;
-  border: 2px solid #E84E2A;
-  box-shadow: 0 0 25px rgba(232, 78, 42, 0.3);
+  height: clamp(20rem, 40vh, 30rem); 
+  border-radius: 0.75rem;
+  border: 0.125rem solid #E84E2A;
+  box-shadow: 0 0 1.5rem rgba(232, 78, 42, 0.3);
   filter: brightness(0.8);
   transition: filter 0.3s ease;
 }
@@ -142,7 +135,6 @@ h1 {
   filter: brightness(1);
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
   .contacto-inner {
     grid-template-columns: 1fr;
@@ -154,6 +146,6 @@ h1 {
   }
 
   .contact-right iframe {
-    height: 300px;
+    height: 18rem;
   }
 }

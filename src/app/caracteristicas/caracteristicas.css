@@ -59,7 +59,7 @@
   aspect-ratio: auto;            
   min-height: 250px;             
 }
-
+ 
 .feature.in-view {
   opacity: 1;
   transform: translateY(0);
@@ -101,6 +101,7 @@
   0%, 100% { transform: translateY(0); opacity: 1; }
   50% { transform: translateY(-10px); opacity: 0.9; }
 }
+
 
 @keyframes slowPulse {
   from { transform: scale(1); opacity: 0.02; }

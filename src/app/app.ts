@@ -33,7 +33,6 @@ export class App {
 
   private checkIfAuthRoute(url: string | null): boolean {
     if (!url) return false;
-    // normalize (remove query/fragment)
     const path = url.split('?')[0].split('#')[0];
     return this.authRoutes.some(r => path === r || path.startsWith(r + '/'));
   }
