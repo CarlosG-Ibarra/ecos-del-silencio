@@ -13,7 +13,6 @@
   overflow: hidden;
 }
 
-/* Subtle eerie pulse */
 .app-info::before {
   content: '';
   position: absolute;
