@@ -1,14 +1,15 @@
 .page-container {
-  background-color: #070501;
   font-family: "Poppins", sans-serif;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .inicio {
-  background: 
-    linear-gradient(rgba(7, 5, 1, 0.25), rgba(7, 5, 1, 0.25)),
-    url('./inicio-main-img.jpg') center center / cover no-repeat fixed;
+  position: relative;
   color: #f5f5f5;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,10 +17,28 @@
   padding: 2rem;
   box-sizing: border-box;
   overflow: hidden;
-  position: relative;
 }
 
 .inicio::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  background-image: 
+    linear-gradient(rgba(7, 5, 1, 0.25), rgba(7, 5, 1, 0.25)),
+    url('./inicio-main-img.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.inicio::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -144,22 +163,12 @@
 
 /* Historia Preview */
 .historia-preview {
-  background-color: #0a0703;
   position: relative;
   padding: 2rem 0;
-}
-
-.historia-preview::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(232, 78, 42, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(137, 5, 1, 0.08) 0%, transparent 50%);
-  animation: backgroundShift 15s ease-in-out infinite alternate;
+  background: linear-gradient(to bottom, 
+    rgba(7, 5, 1, 0.2) 0%,
+    rgba(7, 5, 1, 0.4) 100%
+  );
 }
 
 .historia-cards {
@@ -262,9 +271,12 @@
 
 /* Minijuegos Preview */
 .minijuegos-preview {
-  background-color: #070501;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(to bottom, 
+    rgba(7, 5, 1, 0.4) 0%,
+    rgba(7, 5, 1, 0.6) 100%
+  );
 }
 
 .minijuegos-preview::before {
