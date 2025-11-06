@@ -14,3 +14,4 @@ bootstrapApplication(App, {
     provideAuth(() => getAuth())
   ]
 });
+
