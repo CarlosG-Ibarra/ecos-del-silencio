@@ -1,6 +1,29 @@
-<div class="juego3-container">
-  <h2>{{ mensaje }}</h2>
-  <div class="canvas-placeholder">
-    <p>Espacio para el juego 3</p>
+<div class="juego3-contenedor">
+
+  <div class="screamer-overlay" *ngIf="juegoTerminado">
+    <img src="assets/images/screamer_fantasma.gif" alt="SCREAMER">
+  </div>
+
+  <div class="juego-ui" *ngIf="!juegoTerminado">
+    
+    <div class="visor-cuarto">
+      <img class="img-normal" src="assets/images/cuarto_normal.jpg" alt="Un cuarto vacío">
+      
+      <img 
+        class="img-anomalia" 
+        src="assets/images/cuarto_anomalia_cara.png" 
+        alt="Una cara!" 
+        *ngIf="mostrandoAnomalia"
+      >
+    </div>
+
+    <div class="controles-ui">
+      <h3>Vidas: {{ vidas }}</h3>
+      <p>{{ mensajeFeedback }}</p>
+      <button class="btn-reportar" (click)="reportarAnomalia()">
+        Reportar Anomalía
+      </button>
+    </div>
+
   </div>
 </div>

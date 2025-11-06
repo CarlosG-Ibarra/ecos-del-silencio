@@ -1,9 +1,21 @@
-<div class="juego1-container">
-  <h2>{{ mensaje }}</h2>
-  <p>Espacio reservado para el juego. Aquí puedes poner un canvas, iframe, etc.</p>
-
-  <!-- Simulación del área del juego -->
-  <div class="canvas-placeholder">
-    <p>🕹️ Área de juego</p>
+<div class="juego1-contenedor">
+  
+  <div class="screamer-overlay" *ngIf="juegoTerminado">
+    <img src="assets/images/screamer_cara.gif" alt="SCREAMER">
   </div>
+
+  <div class="juego-ui" *ngIf="!juegoTerminado">
+    <h2>Juego 1: No Respires</h2>
+    <p>...está cerca. No dejes que te oiga.</p>
+    
+    <div class="capa-vision" [style.opacity]="vision">
+      <img src="assets/images/pasillo_oscuro.jpg" alt="Ves un pasillo oscuro">
+    </div>
+
+    <div class="barra-peligro-fondo">
+      <div class="barra-peligro-relleno" [style.width.%]="nivelDePeligro"></div>
+    </div>
+    <div class="texto-peligro">PELIGRO: {{ nivelDePeligro | number:'1.0-0' }}%</div>
+  </div>
+  
 </div>

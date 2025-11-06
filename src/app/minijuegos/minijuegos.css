@@ -1,55 +1,79 @@
-.minijuegos-container {
-  padding: 2rem;
+/* Estilo de terror oscuro para el menú */
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #111;
+  color: #eee;
+  font-family: 'Creepster', cursive; /* (Importa esta fuente en tu index.html para un look de terror) */
+}
+
+.contenedor-principal {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
   text-align: center;
-  color: #333;
 }
 
-.minijuegos-container h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-/* --- Layout base --- */
-.minijuegos-grid {
+.cuadros-seleccion {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
   justify-content: center;
-  transition: all 0.4s ease;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-top: 50px;
 }
 
-.juego-card {
-  background: #f2f2f2;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+.cuadro {
   width: 250px;
+  height: 250px;
+  background-color: #222;
+  border: 2px solid #8B0000; /* Rojo sangre */
   cursor: pointer;
-  transition: all 0.4s ease;
-  transform-origin: center;
+  transition: all 0.3s ease;
+  padding: 10px;
+  box-shadow: 0 0 10px #8B0000;
 }
 
-.juego-card:hover {
+.cuadro:hover {
   transform: scale(1.05);
+  background-color: #333;
+  box-shadow: 0 0 20px #ff0000;
 }
 
-/* --- Estado expandido --- */
-.minijuegos-grid.expandido {
-  flex-direction: column;
-  align-items: center;
+.cuadro h3 {
+  color: #ff0000;
+  font-size: 1.8rem;
 }
 
-.juego-card.activo {
-  width: 80%;
-  max-width: 1000px;
-  height: 400px;
-  font-size: 1.2rem;
-  background: #e7f1ff;
-  transform: scale(1.02);
+.cuadro p {
+  font-size: 1rem;
+  color: #ccc;
 }
 
-.minijuegos-grid.expandido .juego-card:not(.activo) {
-  width: 60%;
-  max-width: 600px;
-  opacity: 0.8;
+.icono-cuadro {
+  font-size: 3rem;
+  margin-top: 20px;
+  opacity: 0.5;
+}
+
+.area-juego {
+  margin-top: 20px;
+  position: relative;
+}
+
+.btn-salir {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #500;
+  border: 1px solid #ff0000;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+
+.btn-salir:hover {
+  background: #8B0000;
 }
