@@ -7,6 +7,13 @@
     <a routerLink="/minijuegos">Minijuegos</a>
     <a routerLink="/contacto">Contacto</a>
     <a routerLink="/appinfo">App</a>
-    <a routerLink="/login" class="login-link">Login</a>
+    @if (!currentUser) {
+      <a routerLink="/login" class="login-link">Login</a>
+    } @else {
+      <div class="user-email" (click)="logout()">
+        <span class="email-text">{{ currentUser.email }}</span>
+        <span class="logout-text">Salir</span>
+      </div>
+    }
   </nav>
 </header>
