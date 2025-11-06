@@ -1,0 +1,96 @@
+.app-info {
+  background: linear-gradient(180deg, #070501 0%, #0d0905 100%);
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 2rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-info::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(232, 78, 42, 0.03) 0%, transparent 70%);
+  animation: slowPulse 10s infinite alternate;
+  z-index: 0;
+}
+
+.app-info * {
+  position: relative;
+  z-index: 1;
+}
+
+.app-info h1 {
+  color: #E84E2A;
+  text-shadow: 0 0 10px #890501;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-info p {
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.app-devices {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.device {
+  background: rgba(7, 5, 1, 0.85);
+  border: 2px solid #E84E2A;
+  box-shadow: 0 0 20px rgba(232, 78, 42, 0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.device:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(232, 78, 42, 0.6);
+}
+
+.device img {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.download-links button {
+  background-color: #E84E2A;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  color: #070501;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.download-links button:hover {
+  transform: scale(1.05);
+  background-color: #ff6433;
+}
+
+@keyframes slowPulse {
+  from { transform: scale(1); opacity: 0.03; }
+  to { transform: scale(1.1); opacity: 0.07; }
+}

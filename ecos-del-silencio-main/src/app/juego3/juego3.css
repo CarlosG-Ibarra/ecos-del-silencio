@@ -1,0 +1,72 @@
+.juego3-contenedor {
+  width: 100%;
+  height: 600px;
+  background-color: #050505;
+  border: 2px solid #444;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.visor-cuarto {
+  width: 100%;
+  max-width: 700px;
+  height: 450px;
+  background-color: #000;
+  border: 1px solid #555;
+  position: relative; /* Clave para superponer la anomalía */
+}
+
+.visor-cuarto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-anomalia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8; /* Para que parezca más "fantasmal" */
+  animation: fadeIn 0.5s;
+}
+
+.controles-ui {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-reportar {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #8B0000;
+  color: white;
+  border: 1px solid #ff0000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-reportar:hover {
+  background-color: #c00;
+}
+
+/* Estilo del Screamer (reutilizado) */
+.screamer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9999;
+}
+.screamer-overlay img { width: 100%; height: 100%; object-fit: cover; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.8; }
+}
