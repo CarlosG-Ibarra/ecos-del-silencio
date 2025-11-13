@@ -205,3 +205,21 @@
     padding: 0.35rem 0.7rem;
   }
 }
+
+/* --- HEART ICON --- */
+.heart-icon {
+  width: 50px;      /* smaller size */
+  height: 50px;
+  color: #E84E2A;
+  margin-bottom: 0.4rem;
+}
+
+.heartbeat {
+  animation: heartbeat 1s infinite;
+  transform-origin: center;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
