@@ -1,96 +1,207 @@
-.app-info {
-  background: linear-gradient(180deg, #070501 0%, #0d0905 100%);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Creepster&display=swap');
+
+/* --- FONT STYLES --- */
+.horror-font {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #E84E2A;
+  text-transform: uppercase;
+}
+
+.blood-font {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   color: #f5f5f5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 6rem 2rem;
+}
+
+.glitch-text {
+  font-family: "Creepster", cursive;
+  font-size: 1.2rem;
+  color: #E84E2A;
+  text-shadow: 0 0 6px rgba(232, 78, 42, 0.6);
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; text-shadow: 0 0 10px #E84E2A; }
+  50% { opacity: 0.6; text-shadow: none; }
+}
+
+/* --- MAIN CONTAINER --- */
+.appinfo-container {
   font-family: "Poppins", sans-serif;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  color: #f5f5f5;
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  padding: 4rem 2rem;
 }
 
-.app-info::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(232, 78, 42, 0.03) 0%, transparent 70%);
-  animation: slowPulse 10s infinite alternate;
-  z-index: 0;
-}
-
-.app-info * {
-  position: relative;
-  z-index: 1;
-}
-
-.app-info h1 {
+/* --- HEADER --- */
+.appinfo-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
   color: #E84E2A;
-  text-shadow: 0 0 10px #890501;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  text-shadow: 0 0 15px #890501;
 }
 
-.app-info p {
-  color: #ccc;
-  max-width: 700px;
-  margin: 0 auto 2rem auto;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-.app-devices {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.device {
-  background: rgba(7, 5, 1, 0.85);
-  border: 2px solid #E84E2A;
-  box-shadow: 0 0 20px rgba(232, 78, 42, 0.3);
-  border-radius: 10px;
-  padding: 1.5rem;
-  width: 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.device:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(232, 78, 42, 0.6);
-}
-
-.device img {
-  width: 100px;
+.subtitle {
+  color: #f0b090;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
-.download-links button {
-  background-color: #E84E2A;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  margin: 0.5rem;
-  color: #070501;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+/* --- WATCH GRID --- */
+.watch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
 }
 
-.download-links button:hover {
+/* --- WATCH CIRCLE --- */
+.watch-circle {
+  text-align: center;
+  max-width: 300px;
+}
+
+.watch-face {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #1a0b00 0%, #000 100%);
+  border: 4px solid #E84E2A;
+  box-shadow: 0 0 30px rgba(232, 78, 42, 0.4);
+  margin: 0 auto 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.watch-face:hover {
   transform: scale(1.05);
-  background-color: #ff6433;
+  box-shadow: 0 0 60px rgba(232, 78, 42, 0.7);
 }
 
-@keyframes slowPulse {
-  from { transform: scale(1); opacity: 0.03; }
-  to { transform: scale(1.1); opacity: 0.07; }
+/* --- WATCH CONTENT --- */
+.watch-content {
+  width: 85%;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+.watch-content h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #E84E2A;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 8px rgba(232, 78, 42, 0.4);
+}
+
+.watch-content p {
+  color: #cfcfcf;
+  font-size: 0.75rem;
+  margin: 0.2rem 0;
+}
+
+/* --- BUTTON --- */
+.watch-btn {
+  background: #E84E2A;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  color: #070501;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 0.4rem;
+}
+
+.watch-btn:hover {
+  background: #ff6433;
+  transform: scale(1.05);
+}
+
+/* --- PROGRESS BAR --- */
+.progress {
+  width: 80%;
+  height: 6px;
+  background: #222;
+  border-radius: 4px;
+  margin: 0.8rem auto;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 60%;
+  height: 100%;
+  background: #E84E2A;
+  animation: loading 2s infinite alternate;
+}
+
+@keyframes loading {
+  from { width: 20%; }
+  to { width: 100%; }
+}
+
+/* --- ANIMATIONS --- */
+.heartbeat {
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.pulse-orange {
+  animation: pulseOrange 1.8s infinite;
+}
+
+@keyframes pulseOrange {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(232, 78, 42, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 55px rgba(232, 78, 42, 0.8);
+  }
+}
+
+/* --- FOOTER --- */
+.appinfo-footer {
+  margin-top: 4rem;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .watch-face {
+    width: 220px;
+    height: 220px;
+  }
+
+  .watch-content {
+    font-size: 0.75rem;
+  }
+
+  .watch-content h2 {
+    font-size: 0.9rem;
+  }
+
+  .watch-content p {
+    font-size: 0.7rem;
+  }
+
+  .watch-btn {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+  }
 }

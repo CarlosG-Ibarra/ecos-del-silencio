@@ -77,7 +77,7 @@ export class App implements OnInit {
     const jumpscare = document.createElement('div');
     jumpscare.classList.add('jumpscare');
     jumpscare.innerHTML = `
-      <img src="/assets/jumpscare.jpg" alt="Jumpscare" />
+      <img src="/assets/jumpscare3.jpg" alt="Jumpscare" />
       <audio autoplay src="/assets/jumpscare-sound.mp3"></audio>
     `;
 
