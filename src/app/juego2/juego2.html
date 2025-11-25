@@ -4,13 +4,13 @@
 }">
 
   <div class="screamer-overlay" *ngIf="juegoTerminado">
-    <img src="assets/images/screamer_monstruo.jpg" alt="SCREAMER">
+    <img src="assets/Images/Awake.png" alt="SCREAMER">
   </div>
 
   <div class="juego-ui" *ngIf="!juegoTerminado">
-    <div classt="imagen-monstruo">
-      <img src="assets/images/monstruo_descansando.png" *ngIf="estado === 'descansando'" alt="Monstruo descansando">
-      <img src="assets/images/monstruo_cazando.png" *ngIf="estado === 'cazando'" alt="Monstruo cazando">
+    <div class="imagen-monstruo">
+      <img src="assets/Images/SleepingMonster.png" *ngIf="estado === 'descansando'" alt="Monstruo descansando">
+      <img src="assets/Images/Awake.png" *ngIf="estado === 'cazando'" alt="Monstruo cazando">
     </div>
     
     <div class="instrucciones">

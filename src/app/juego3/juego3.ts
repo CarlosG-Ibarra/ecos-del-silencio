@@ -18,7 +18,7 @@ export class Juego3Component implements OnInit, OnDestroy {
   mensajeFeedback: string = "Observa con atención...";
   
   private gameTimeout: any;
-  private screamerAudio = new Audio('assets/sounds/screamer_fantasma.mp3');
+  private screamerAudio = new Audio('assets/sounds/screamer_grito.mp3');
   private audioAmbiente = new Audio('assets/sounds/ambiente_estatica.mp3');
   private audioError = new Audio('assets/sounds/sonido_error.mp3');
   private audioAcierto = new Audio('assets/sounds/sonido_acierto.mp3');

@@ -21,7 +21,7 @@ export class MinijuegosComponent {
   juegoActivo: 'juego1' | 'juego2' | 'juego3' | null = null;
   
   // Audio para el menú, opcional
-  private menuAudio = new Audio('assets/sounds/menu_ambiente.mp3');
+  private menuAudio = new Audio('assets/sounds/Theme.mp3');
 
   constructor() {
     // Para que el ambiente suene en loop
