@@ -1,0 +1,258 @@
+.login-section {
+  background: 
+    linear-gradient(rgba(7,5,1,0.6), rgba(7,5,1,0.6)),
+    url('./login-bg.jpg') center center / cover no-repeat fixed;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      transparent 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      transparent 100%
+    );
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.login-box {
+  background: rgba(15, 15, 15, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 480px;
+  min-width: 320px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.5s ease-out, float 6s ease-in-out infinite;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1400px) {
+  .login-box {
+    max-width: 520px;
+    padding: 2.2rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .login-box {
+    max-width: 550px;
+    padding: 2.5rem;
+  }
+}
+
+.login-box::before,
+.login-box::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  z-index: -1;
+  animation: chromatic 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.login-box::before {
+  background: rgba(0, 183, 255, 0.2);
+  filter: blur(4px);
+  transform: translate(-3px, 0);
+}
+
+.login-box::after {
+  background: rgba(255, 0, 0, 0.2);
+  filter: blur(4px);
+  transform: translate(3px, 0);
+}
+
+.login-box h1 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.login-box h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #E84E2A;
+  border-radius: 2px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 0 15px rgba(0, 183, 255, 0.2),
+    0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.login-box input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.login-box button {
+  background: linear-gradient(135deg, #E84E2A, #ff6433);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.login-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(232, 78, 42, 0.4);
+}
+
+.register {
+  margin-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.register a {
+  color: #E84E2A;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.register a:hover {
+  color: #ff6433;
+}
+
+.google-login {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-weight: 500;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 1.2rem 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.google-login img {
+  width: 24px;
+  height: 24px;
+}
+
+.google-login:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+@keyframes chromatic {
+  0%, 100% {
+    opacity: 0.5;
+    filter: blur(4px);
+    transform: translate(var(--translate));
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(3px);
+    transform: translate(calc(var(--translate) * 1.2));
+  }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.8; }
+  94% { opacity: 1; }
+  95% { opacity: 0.9; }
+  96% { opacity: 1; }
+  97% { opacity: 0.9; }
+  98% { opacity: 1; }
+  99% { opacity: 0.8; }
+}
+
+@keyframes textDistort {
+  0%, 100% { transform: none; opacity: 1; }
+  25% { transform: skew(-2deg); opacity: 0.8; }
+  75% { transform: skew(2deg); opacity: 0.9; }
+}
+
