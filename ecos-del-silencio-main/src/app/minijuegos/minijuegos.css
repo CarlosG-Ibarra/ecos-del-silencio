@@ -1,0 +1,79 @@
+/* Estilo de terror oscuro para el menú */
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #111;
+  color: #eee;
+  font-family: 'Creepster', cursive; /* (Importa esta fuente en tu index.html para un look de terror) */
+}
+
+.contenedor-principal {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.cuadros-seleccion {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+
+.cuadro {
+  width: 250px;
+  height: 250px;
+  background-color: #222;
+  border: 2px solid #8B0000; /* Rojo sangre */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+  box-shadow: 0 0 10px #8B0000;
+}
+
+.cuadro:hover {
+  transform: scale(1.05);
+  background-color: #333;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+.cuadro h3 {
+  color: #ff0000;
+  font-size: 1.8rem;
+}
+
+.cuadro p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.icono-cuadro {
+  font-size: 3rem;
+  margin-top: 20px;
+  opacity: 0.5;
+}
+
+.area-juego {
+  margin-top: 20px;
+  position: relative;
+}
+
+.btn-salir {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #500;
+  border: 1px solid #ff0000;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+
+.btn-salir:hover {
+  background: #8B0000;
+}
