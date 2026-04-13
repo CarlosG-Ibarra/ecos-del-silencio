@@ -1,20 +1,20 @@
 .header {
-  background-color: #070501; /* dark base */
+  background-color: #000000; /* pitch black for the Upside Down darkness */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
   font-family: "Poppins", sans-serif;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 15px rgba(88, 1, 1, 0.8); /* deep red shadow */
   position: sticky;
   top: 0;
   left: 0;
   z-index: 1000;
-  border-bottom: 3px solid #E84E2A;
+  border-bottom: 4px solid #460404; /* dark red border */
   overflow: hidden;
 }
 
-/* faint orange aura like inicio background */
+/* eerie red mist effect */
 .header::before {
   content: '';
   position: absolute;
@@ -22,18 +22,17 @@
   left: -100%;
   width: 300%;
   height: 300%;
-  background: radial-gradient(circle at center, rgba(232, 78, 42, 0.05) 0%, transparent 70%);
-  animation: slowPulse 10s infinite alternate;
+  background: radial-gradient(circle at center, rgba(139, 0, 0, 0.15) 0%, transparent 70%);
+  animation: slowPulse 8s infinite alternate;
   z-index: 0;
 }
 
 .logo {
-  color: #E84E2A; /* orange highlight */
+  color: #DC143C; /* crimson red */
   font-size: 1.8rem;
   font-weight: 700;
-  text-shadow: 0 0 10px #890501;
   font-family: 'Creepster', cursive;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   position: relative;
   z-index: 1;
 }
@@ -47,7 +46,7 @@
 }
 
 .nav-links a {
-  color: #7D7774; /* lighter text */
+  color: #A9A9A9; /* dark gray text */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s, text-shadow 0.3s;
@@ -56,30 +55,31 @@
 }
 
 .nav-links a:hover {
-  color: #E84E2A;
-  text-shadow: 0 0 10px #E84E2A;
+  color: #DC143C;
+  text-shadow: 0 0 10px #DC143C, 0 0 20px #DC143C;
 }
 
 .login-link {
-  border: 1px solid #E84E2A;
+  border: 2px solid #DC143C;
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: all 0.3s ease;
+  background-color: transparent;
 }
 
 .login-link:hover {
-  background-color: #E84E2A;
-  color: #070501;
-  box-shadow: 0 0 10px #E84E2A;
+  background-color: #DC143C;
+  color: #000000;
+  box-shadow: 0 0 15px #DC143C, 0 0 30px #DC143C;
 }
 
 .user-email {
-  color: #E84E2A !important;
+  color: #DC143C !important;
   font-family: 'Creepster', cursive !important;
   font-size: 1rem;
-  text-shadow: 0 0 10px #890501;
+  text-shadow: 0 0 10px #8B0000, 0 0 20px #8B0000;
   padding: 0.35rem 0.9rem;
-  border: 1px solid #E84E2A;
+  border: 2px solid #DC143C;
   border-radius: 6px;
   cursor: pointer;
   position: relative;
@@ -88,6 +88,13 @@
   transition: all 0.3s ease;
   max-width: 180px;
   margin-left: 0.5rem;
+  background-color: rgba(139, 0, 0, 0.1);
+}
+
+.user-email:hover {
+  background-color: #DC143C;
+  color: #000000 !important;
+  box-shadow: 0 0 15px #DC143C;
 }
 
 .email-text, .logout-text {
@@ -109,13 +116,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #890501;
+  background-color: #8B0000;
   transform: translateY(100%);
-  color: #E84E2A;
-}
-
-.user-email:hover {
-  box-shadow: 0 0 15px #890501;
+  color: #DC143C;
 }
 
 .user-email:hover .email-text {

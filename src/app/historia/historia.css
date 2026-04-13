@@ -21,12 +21,24 @@
   height: auto;
   transform: translate(-50%, -50%);
   background-image: 
-    linear-gradient(rgba(7, 5, 1, 0.2), rgba(7, 5, 1, 0.3)),
-    url('./historia-bg.jpeg');
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url('./historia-bg.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+}
+
+.historia::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(139, 0, 0, 0.1) 0%, transparent 70%);
+  animation: slowPulse 8s infinite alternate;
+  z-index: 0;
 }
 
 .timeline {
@@ -45,7 +57,7 @@
   top: 0;
   width: 3px;
   height: 100%;
-  background: linear-gradient(to bottom, #890501, #E84E2A);
+  background: linear-gradient(to bottom, #660000, #A52A2A);
   transform: translateX(-50%);
   opacity: 0.8;
   z-index: 2;
@@ -68,9 +80,9 @@
 }
 
 .timeline-item .content {
-  background: rgba(7, 5, 1, 0.85);
-  border: 2px solid #E84E2A;
-  box-shadow: 0 0 15px rgba(232, 78, 42, 0.4);
+  background: rgba(20, 20, 20, 0.9);
+  border: 2px solid #A52A2A;
+  box-shadow: 0 0 15px rgba(102, 0, 0, 0.4);
   padding: 1.5rem;
   border-radius: 8px;
   position: relative;
@@ -85,10 +97,10 @@
   right: -12px;
   width: 20px;
   height: 20px;
-  background: #E84E2A;
-  border: 3px solid #890501;
+  background: #A52A2A;
+  border: 3px solid #660000;
   border-radius: 50%;
-  box-shadow: 0 0 15px #E84E2A;
+  box-shadow: 0 0 15px #A52A2A;
 }
 
 .timeline-item.right::after {
@@ -98,15 +110,15 @@
 
 .timeline-item .content:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 25px rgba(232, 78, 42, 0.8);
+  box-shadow: 0 0 25px rgba(102, 0, 0, 0.8);
 }
 
 .timeline-item h2 {
-  color: #E84E2A;
+  color: #A52A2A;
   font-family: "Creepster", cursive;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  text-shadow: 0 0 10px #890501;
+  text-shadow: 0 0 10px #660000;
 }
 
 .timeline-item p {

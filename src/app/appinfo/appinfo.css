@@ -5,7 +5,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #E84E2A;
+  color: #A52A2A;
   text-transform: uppercase;
 }
 
@@ -18,8 +18,8 @@
 .glitch-text {
   font-family: "Creepster", cursive;
   font-size: 1.2rem;
-  color: #E84E2A;
-  text-shadow: 0 0 6px rgba(232, 78, 42, 0.6);
+  color: #A52A2A;
+  text-shadow: 0 0 6px rgba(102, 0, 0, 0.6);
   animation: flicker 1.5s infinite alternate;
 }
 
@@ -33,7 +33,8 @@
   font-family: "Poppins", sans-serif;
   text-align: center;
   color: #f5f5f5;
-  background: radial-gradient(circle at top, #0a0a0a, #000);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)), radial-gradient(circle at top, rgba(20, 20, 20, 0.5), #000);
+  background-blend-mode: multiply;
   padding: 4rem 2rem;
 }
 
@@ -41,12 +42,12 @@
 .appinfo-header h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: #E84E2A;
-  text-shadow: 0 0 15px #890501;
+  color: #A52A2A;
+  text-shadow: 0 0 15px #660000;
 }
 
 .subtitle {
-  color: #f0b090;
+  color: #A9A9A9;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -70,9 +71,9 @@
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  background: radial-gradient(circle at center, #1a0b00 0%, #000 100%);
-  border: 4px solid #E84E2A;
-  box-shadow: 0 0 30px rgba(232, 78, 42, 0.4);
+  background: radial-gradient(circle at center, #150606 0%, #000 100%);
+  border: 4px solid #A52A2A;
+  box-shadow: 0 0 30px rgba(102, 0, 0, 0.4);
   margin: 0 auto 1rem auto;
   display: flex;
   justify-content: center;
@@ -84,7 +85,7 @@
 
 .watch-face:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 60px rgba(232, 78, 42, 0.7);
+  box-shadow: 0 0 60px rgba(102, 0, 0, 0.7);
 }
 
 /* --- WATCH CONTENT --- */
@@ -98,10 +99,10 @@
 .watch-content h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: #E84E2A;
+  color: #A52A2A;
   font-size: 1rem;
   margin-bottom: 0.3rem;
-  text-shadow: 0 0 8px rgba(232, 78, 42, 0.4);
+  text-shadow: 0 0 8px rgba(102, 0, 0, 0.4);
 }
 
 .watch-content p {
@@ -112,11 +113,11 @@
 
 /* --- BUTTON --- */
 .watch-btn {
-  background: #E84E2A;
+  background: #A52A2A;
   border: none;
   padding: 0.4rem 0.8rem;
   border-radius: 8px;
-  color: #070501;
+  color: #000000;
   cursor: pointer;
   font-weight: 600;
   font-size: 0.8rem;
@@ -125,7 +126,7 @@
 }
 
 .watch-btn:hover {
-  background: #ff6433;
+  background: #DC143C;
   transform: scale(1.05);
 }
 
@@ -142,7 +143,7 @@
 .progress-bar {
   width: 60%;
   height: 100%;
-  background: #E84E2A;
+  background: #A52A2A;
   animation: loading 2s infinite alternate;
 }
 
@@ -167,10 +168,10 @@
 
 @keyframes pulseOrange {
   0%, 100% {
-    box-shadow: 0 0 25px rgba(232, 78, 42, 0.4);
+    box-shadow: 0 0 25px rgba(102, 0, 0, 0.4);
   }
   50% {
-    box-shadow: 0 0 55px rgba(232, 78, 42, 0.8);
+    box-shadow: 0 0 55px rgba(102, 0, 0, 0.8);
   }
 }
 
