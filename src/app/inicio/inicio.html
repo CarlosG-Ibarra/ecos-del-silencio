@@ -3,12 +3,14 @@
   <section class="inicio">
     <div class="inicio-content">
       <h1 class="title">ECOS DEL SILENCIO</h1>
-      <h2 class="subtitle">Terror Psicológico Inmersivo</h2>
+      <h2 class="subtitle">Terror Psicológico Adaptativo</h2>
       <p class="description">
-        Un videojuego de terror psicológico que utiliza tu voz y ritmo cardíaco para crear la experiencia más aterradora jamás desarrollada.  
-        ¿Estás preparado para enfrentar tus miedos?
+        Un videojuego de terror psicológico que se adapta a tu estado emocional en tiempo real.
+        Utiliza tu ritmo cardíaco para transformar el entorno, los enemigos y la experiencia.
+        Mientras más miedo sientas… más peligroso se vuelve todo.
+        ¿Podrás mantener la calma?
       </p>
-      <button class="cta-btn" routerLink="/login">DESCUBRE EL TERROR</button>
+      <button class="cta-btn" routerLink="/login">ENTRAR AL SILENCIO</button>
     </div>
   </section>
 
@@ -19,8 +21,11 @@
       <div class="historia-cards">
         <div class="historia-card" [routerLink]="['/historia']">
           <div class="card-content">
-            <h3>El Hospital Abandonado</h3>
-            <p>Explora los oscuros pasillos de un hospital psiquiátrico abandonado, donde los ecos del pasado cobran vida...</p>
+            <h3>El Umbral</h3>
+            <p>
+              No es un lugar… es un estado. Una frecuencia a la que solo accedes cuando pierdes el control.
+              Algo observa desde el otro lado, esperando que tu miedo lo acerque más.
+            </p>
             <button class="ghost-btn">Descubrir Más</button>
           </div>
         </div>
@@ -31,20 +36,33 @@
   <!-- Minijuegos Preview -->
   <section class="minijuegos-preview">
     <div class="section-content">
-      <h2>Minijuegos de Terror</h2>
+      <h2>Minijuegos y App Móvil</h2>
       <div class="games-grid">
+        
         <div class="game-card" [routerLink]="['/minijuegos']">
-          <h3>Susurros en la Oscuridad</h3>
-          <p>Escucha atentamente los susurros para sobrevivir en la oscuridad. Cada sonido podría ser tu último aliento...</p>
+          <h3>Control de Pulso</h3>
+          <p>
+            Mantén tu ritmo cardíaco estable mientras el entorno intenta alterarte. 
+            Aprende a controlar tus nervios para sobrevivir.
+          </p>
         </div>
+
         <div class="game-card" [routerLink]="['/minijuegos']">
-          <h3>Escape del Horror</h3>
-          <p>El tiempo se agota. Encuentra la salida mientras las sombras te persiguen sin descanso...</p>
+          <h3>Reacción Sensorial</h3>
+          <p>
+            Responde a estímulos visuales y auditivos antes de que sea demasiado tarde.
+            Cada error aumenta la tensión… y el peligro.
+          </p>
         </div>
+
         <div class="game-card" [routerLink]="['/minijuegos']">
-          <h3>Ritual Nocturno</h3>
-          <p>Los espíritus antiguos te llaman. Completa el ritual antes de que el amanecer revele tu destino...</p>
+          <h3>Memoria Fragmentada</h3>
+          <p>
+            Reconstruye recuerdos distorsionados mientras el miedo intenta confundirte.
+            Desbloquea recompensas para usarlas dentro del juego principal.
+          </p>
         </div>
+
       </div>
     </div>
   </section>

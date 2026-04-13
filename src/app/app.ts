@@ -26,6 +26,7 @@ export class App implements OnInit {
       .subscribe((e) => {
         const nav = e as NavigationEnd;
         this.isAuthPage = this.checkIfAuthRoute(nav.urlAfterRedirects || nav.url);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       });
   }
 
