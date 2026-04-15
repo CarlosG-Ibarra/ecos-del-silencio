@@ -75,10 +75,13 @@ export class App implements OnInit {
     // Prevent multiple scares at once
     if (document.querySelector('.jumpscare')) return;
 
+    const scareImages = ['/assets/minitar.png', '/assets/zombie.png', '/assets/madusa.png'];
+    const selectedImage = scareImages[Math.floor(Math.random() * scareImages.length)];
+
     const jumpscare = document.createElement('div');
     jumpscare.classList.add('jumpscare');
     jumpscare.innerHTML = `
-      <img src="/assets/jumpscare3.jpg" alt="Jumpscare" />
+      <img src="${selectedImage}" alt="Jumpscare" />
       <audio autoplay src="/assets/jumpscare-sound.mp3"></audio>
     `;
 
