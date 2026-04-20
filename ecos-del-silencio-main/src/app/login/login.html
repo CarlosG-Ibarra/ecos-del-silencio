@@ -1,0 +1,29 @@
+<section class="login-section">
+  <div class="login-box">
+    <h1 *ngIf="!isRegisterMode">Iniciar Sesión</h1>
+    <h1 *ngIf="isRegisterMode">Crear una Cuenta</h1>
+
+    <form (ngSubmit)="onSubmit()">
+      <input type="email" placeholder="Correo electrónico" [(ngModel)]="email" name="email" required>
+      <input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required>
+
+      <button type="submit">
+        {{ isRegisterMode ? 'Registrarse' : 'Iniciar Sesión' }}
+      </button>
+
+      <button type="button" class="google-btn" (click)="loginWithGoogle()">
+        <i class="fa-brands fa-google"></i> Iniciar sesión con Google
+      </button>
+
+      <p class="register" *ngIf="!isRegisterMode">
+        ¿No tienes cuenta?
+        <a href="#" (click)="toggleMode($event)">Crear una cuenta</a>
+      </p>
+
+      <p class="register" *ngIf="isRegisterMode">
+        ¿Ya tienes cuenta?
+        <a href="#" (click)="toggleMode($event)">Iniciar sesión</a>
+      </p>
+    </form>
+  </div>
+</section>

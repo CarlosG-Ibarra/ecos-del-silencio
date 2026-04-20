@@ -1,0 +1,26 @@
+<div class="juego2-contenedor" [ngClass]="{
+  'estado-descansando': estado === 'descansando',
+  'estado-cazando': estado === 'cazando'
+}">
+
+  <div class="screamer-overlay" *ngIf="juegoTerminado">
+    <img src="assets/images/screamer_monstruo.jpg" alt="SCREAMER">
+  </div>
+
+  <div class="juego-ui" *ngIf="!juegoTerminado">
+    <div classt="imagen-monstruo">
+      <img src="assets/images/monstruo_descansando.png" *ngIf="estado === 'descansando'" alt="Monstruo descansando">
+      <img src="assets/images/monstruo_cazando.png" *ngIf="estado === 'cazando'" alt="Monstruo cazando">
+    </div>
+    
+    <div class="instrucciones">
+      <h2 *ngIf="estado === 'descansando'" class="texto-seguro">
+        PUEDES MOVERTE... (Cambio en {{ tiempoRestante }}s)
+      </h2>
+      <h2 *ngIf="estado === 'cazando'" class="texto-peligro">
+        ¡¡¡NO TE MUEVAS!!! (Cambio en {{ tiempoRestante }}s)
+      </h2>
+    </div>
+  </div>
+
+</div>

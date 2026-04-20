@@ -1,0 +1,109 @@
+.caracteristicas {
+  background: 
+    linear-gradient(rgba(7, 5, 1, 0.25), rgba(7, 5, 1, 0.25)),
+    url('./lomas.jpeg') center center / cover no-repeat;
+  color: #f5f5f5;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.caracteristicas::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(232, 78, 42, 0.02) 0%, transparent 70%);
+  animation: slowPulse 15s infinite alternate;
+  z-index: 0;
+}
+
+.caracteristicas-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .caracteristicas-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature {
+  background: rgba(7, 5, 1, 0.85);
+  border-left: 6px solid #E84E2A;
+  box-shadow: 0 0 20px rgba(232, 78, 42, 0.3);
+  border-radius: 6px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;  
+  padding: 1.5rem 1rem;         
+  text-align: center;
+  aspect-ratio: auto;            
+  min-height: 250px;             
+}
+ 
+.feature.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(232, 78, 42, 0.6);
+}
+
+.feature h2 {
+  color: #E84E2A;
+  text-shadow: 0 0 10px #890501;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+}
+
+.feature p {
+  color: #c5c5c5;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.ghost-icon {
+  font-size: 2.5rem;
+  color: #E84E2A;
+  text-shadow: 0 0 10px #890501;
+  margin-bottom: 0.5rem;
+  animation: float 4s ease-in-out infinite;
+  transition: color 0.3s ease;
+}
+
+.feature:hover .ghost-icon {
+  color: #FF6E40;
+  text-shadow: 0 0 20px #E84E2A;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-10px); opacity: 0.9; }
+}
+
+
+@keyframes slowPulse {
+  from { transform: scale(1); opacity: 0.02; }
+  to { transform: scale(1.05); opacity: 0.05; }
+}

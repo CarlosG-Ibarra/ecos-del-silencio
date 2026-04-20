@@ -1,0 +1,39 @@
+<div class="contenedor-principal" [class.menu-abierto]="!juegoActivo">
+
+  <div class="cuadros-seleccion" *ngIf="!juegoActivo">
+    <h2>Elige tu Pesadilla</h2>
+    
+    <div class="cuadro" (click)="seleccionarJuego('juego1')">
+      <h3>Juego 1: No Respires</h3>
+      <p>Micrófono Requerido</p>
+      <div class="icono-cuadro">🎤</div>
+    </div>
+    
+    <div class="cuadro" (click)="seleccionarJuego('juego2')">
+      <h3>Juego 2: La Estatua</h3>
+      <p>No te muevas...</p>
+      <div class="icono-cuadro">👀</div>
+    </div>
+    
+    <div class="cuadro" (click)="seleccionarJuego('juego3')">
+      <h3>Juego 3: La Aparición</h3>
+      <p>Encuentra la anomalía</p>
+      <div class="icono-cuadro">👻</div>
+    </div>
+  </div>
+
+  <div class="area-juego">
+    <div [ngSwitch]="juegoActivo">
+      
+      <app-juego1 *ngSwitchCase="'juego1'" (juegoCerrado)="onJuegoCerrado()"></app-juego1>
+      <app-juego2 *ngSwitchCase="'juego2'" (juegoCerrado)="onJuegoCerrado()"></app-juego2>
+      <app-juego3 *ngSwitchCase="'juego3'" (juegoCerrado)="onJuegoCerrado()"></app-juego3>
+      
+    </div>
+    
+    <button class="btn-salir" *ngIf="juegoActivo" (click)="seleccionarJuego(juegoActivo!)">
+      Salir al Menú
+    </button>
+  </div>
+
+</div>
